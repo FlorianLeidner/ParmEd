@@ -1159,7 +1159,7 @@ class CharmmParameterSet(ParameterSet, CharmmImproperMatchingMixin):
         scnb = 1.0 if not scnb else scnb.pop()
 
         f.write('ATOMS\n')
-        self._write_top_to(f, False)
+        self._write_top_to(f, False, False)
         f.write('\nBONDS\n')
         written = set()
         for key, typ in self.bond_types.items():
