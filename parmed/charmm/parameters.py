@@ -1140,7 +1140,7 @@ class CharmmParameterSet(ParameterSet, CharmmImproperMatchingMixin):
                 f.write(f'BOND {bond.atom1.name:<5} {bond.atom2.name:<5}\n')
             f.write('\n')
             for impr in res._impr: # Impropers seem to only be available as private variables
-                f.write('IMPR {:<5} {:<5} {:<5} {:<5}'.format(*impr))
+                f.write('IMPR {:<5} {:<5} {:<5} {:<5}\n'.format(*impr))
 
     def _write_par_to(self, f):
         """ Private method to write parameter items to open file object """
